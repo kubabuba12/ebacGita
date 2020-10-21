@@ -1,10 +1,6 @@
 package com.grspck.controllers;
 
-import com.grspck.models.Akcje;
-import com.grspck.models.Sprzet;
 import com.grspck.models.Zwierzeta;
-import com.grspck.repositories.AkcjaRepository;
-import com.grspck.repositories.SprzetRepository;
 import com.grspck.repositories.ZwierzetaRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,7 +46,7 @@ public class ZwierzetaController
     public Zwierzeta update(@PathVariable Integer id, @RequestBody Zwierzeta zwierzeta)
     {
         Zwierzeta existingZwierze = zwierzetaRepository.getOne(id);
-        BeanUtils.copyProperties(zwierzeta, existingZwierze, "idZwierzecia");
+        BeanUtils.copyProperties(zwierzeta, existingZwierze, "id_zwierzecia");
         return zwierzetaRepository.saveAndFlush(existingZwierze);
     }
 }

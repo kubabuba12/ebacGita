@@ -1,10 +1,6 @@
 package com.grspck.controllers;
 
-import com.grspck.models.Akcje;
-import com.grspck.models.Archiwum;
 import com.grspck.models.Grupa;
-import com.grspck.repositories.AkcjaRepository;
-import com.grspck.repositories.ArchiwumRepository;
 import com.grspck.repositories.GrupaRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,7 +46,7 @@ public class GrupyController
     public Grupa update(@PathVariable Integer id, @RequestBody Grupa grupa)
     {
         Grupa existingGrupa = grupaRepository.getOne(id);
-        BeanUtils.copyProperties(grupa, existingGrupa, "idGrupy");
+        BeanUtils.copyProperties(grupa, existingGrupa, "id_g rupy");
         return grupaRepository.saveAndFlush(existingGrupa);
     }
 }

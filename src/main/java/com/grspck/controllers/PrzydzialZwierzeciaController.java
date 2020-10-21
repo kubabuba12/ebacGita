@@ -46,7 +46,7 @@ public class PrzydzialZwierzeciaController
     public PrzydzialZwierzecia update(@PathVariable Integer id, @RequestBody PrzydzialZwierzecia przydzialZwierzecia)
     {
         PrzydzialZwierzecia existingPrzydzialZwierzecia = przydzialZwierzeciaRepository.getOne(id);
-        BeanUtils.copyProperties(przydzialZwierzecia, existingPrzydzialZwierzecia, "idPrzydzialuZwierzecia");
+        BeanUtils.copyProperties(przydzialZwierzecia, existingPrzydzialZwierzecia, "id_przydzialu_zwierzecia");
         return przydzialZwierzeciaRepository.saveAndFlush(existingPrzydzialZwierzecia);
     }
 }

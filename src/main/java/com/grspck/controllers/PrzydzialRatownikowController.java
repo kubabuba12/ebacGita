@@ -1,12 +1,6 @@
 package com.grspck.controllers;
 
-import com.grspck.models.Akcje;
-import com.grspck.models.Archiwum;
-import com.grspck.models.Grupa;
 import com.grspck.models.PrzydzialRatownikow;
-import com.grspck.repositories.AkcjaRepository;
-import com.grspck.repositories.ArchiwumRepository;
-import com.grspck.repositories.GrupaRepository;
 import com.grspck.repositories.PrzydzialRatownikowRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,7 +46,7 @@ public class PrzydzialRatownikowController
     public PrzydzialRatownikow update(@PathVariable Integer id, @RequestBody PrzydzialRatownikow przydzialRatownikow)
     {
         PrzydzialRatownikow existingPrzydzialRatownikow = przydzialRatownikowRepository.getOne(id);
-        BeanUtils.copyProperties(przydzialRatownikow, existingPrzydzialRatownikow, "idPrzydzialuRatownika");
+        BeanUtils.copyProperties(przydzialRatownikow, existingPrzydzialRatownikow, "id_przydzialu_ratownika");
         return przydzialRatownikowRepository.saveAndFlush(existingPrzydzialRatownikow);
     }
 }

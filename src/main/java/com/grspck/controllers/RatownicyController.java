@@ -48,7 +48,7 @@ public class RatownicyController
     public Ratownicy update(@PathVariable Integer id, @RequestBody Ratownicy ratownicy)
     {
         Ratownicy existingRatownicy = ratownicyRepository.getOne(id);
-        BeanUtils.copyProperties(ratownicy, existingRatownicy, "idRatownika");
+        BeanUtils.copyProperties(ratownicy, existingRatownicy, "id_ratownika");
         return ratownicyRepository.saveAndFlush(existingRatownicy);
     }
 }

@@ -1,67 +1,42 @@
 package com.grspck.models;
 
 import javax.persistence.*;
-import java.util.List;
 
-@Entity(name = "PrzydzialRatownikow")
+@Entity(name = "przydzial_ratownikow")
 public class PrzydzialRatownikow
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idPrzydzialuRatownikow;
-    private int idGrupy;
-    private int idRatownika;
-
-    @OneToOne
-    @JoinColumn(name = "idGrupy", referencedColumnName = "idGrupy")
-    private Grupa grupy;
-
-    @OneToMany
-    @JoinColumn(name = "idRatownika", referencedColumnName = "idRatownika")
-    private List<Ratownicy> ratownicy;
+    private int id_przydzialu_ratownikow;
+    private int id_grupy;
+    private int id_ratownika;
 
     public PrzydzialRatownikow()
     {
 
     }
 
-    public Grupa getGrupy() {
-        return grupy;
+    public int getId_przydzialu_ratownikow() {
+        return id_przydzialu_ratownikow;
     }
 
-    public void setGrupy(Grupa grupy) {
-        this.grupy = grupy;
+    public void setId_przydzialu_ratownikow(int id_przydzialu_ratownikow) {
+        this.id_przydzialu_ratownikow = id_przydzialu_ratownikow;
     }
 
-    public List<Ratownicy> getRatownicy() {
-        return ratownicy;
+    public int getId_grupy() {
+        return id_grupy;
     }
 
-    public void setRatownicy(List<Ratownicy> ratownicy) {
-        this.ratownicy = ratownicy;
+    public void setId_grupy(int id_grupy) {
+        this.id_grupy = id_grupy;
     }
 
-    public int getIdPrzydzialuRatownikow() {
-        return idPrzydzialuRatownikow;
+    public int getId_ratownika() {
+        return id_ratownika;
     }
 
-    public void setIdPrzydzialuRatownikow(int idPrzydzialuRatownikow) {
-        this.idPrzydzialuRatownikow = idPrzydzialuRatownikow;
-    }
-
-    public int getIdGrupy() {
-        return idGrupy;
-    }
-
-    public void setIdGrupy(int idGrupy) {
-        this.idGrupy = idGrupy;
-    }
-
-    public int getIdRatownika() {
-        return idRatownika;
-    }
-
-    public void setIdRatownika(int idRatownika) {
-        this.idRatownika = idRatownika;
+    public void setId_ratownika(int id_ratownika) {
+        this.id_ratownika = id_ratownika;
     }
 }

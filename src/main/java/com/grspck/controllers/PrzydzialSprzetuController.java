@@ -46,7 +46,7 @@ public class PrzydzialSprzetuController
     public PrzydzialSprzetu update(@PathVariable Integer id, @RequestBody PrzydzialSprzetu przydzialSprzetu)
     {
         PrzydzialSprzetu existingPrzydzialSprzetu = przydzialSprzetuRepository.getOne(id);
-        BeanUtils.copyProperties(przydzialSprzetu, existingPrzydzialSprzetu, "idPrzydzialuSprzetu");
+        BeanUtils.copyProperties(przydzialSprzetu, existingPrzydzialSprzetu, "id_przydzialu_sprzetu");
         return przydzialSprzetuRepository.saveAndFlush(existingPrzydzialSprzetu);
     }
 }

@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.pluralsight</groupId>
-    <artifactId>conference-demo</artifactId>
+    <artifactId>grskpck</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>conference-demo</name>
-    <description>Demo project for Spring Boot</description>
+    <name>grskpck</name>
+    <description>Project for PCK</description>
 
     <properties>
         <java.version>1.8</java.version>

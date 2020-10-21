@@ -5,94 +5,73 @@ import org.hibernate.annotations.Type;
 import javax.persistence.*;
 import java.util.List;
 
-@Entity(name = "Archiwum")
+@Entity(name = "archiwum")
 public class Archiwum
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idArchiwum;
-    private int idGrupy;
-    private boolean czyZnaleziono;
+    private int id_archiwum;
+    private int id_grupy;
+    private boolean czy_znaleziono;
     private String wspolrzedne;
 
     @Lob
     @Type(type = "org.hibernate.type.BinaryType")
     private byte[] trasa;
 
-    @OneToOne
-    @JoinColumn(name = "idGrupy", referencedColumnName = "idGrupy")
-    private Grupa grupy;
-
-    @OneToOne
-    @JoinColumn(name = "idAkcji", referencedColumnName = "idAkcji")
-    private Akcje akcja;
-
     public Archiwum()
     {
 
     }
 
-    public Akcje getAkcja() {
-        return akcja;
+    @OneToOne
+    private Grupa grupa;
+
+    public int getId_archiwum() {
+        return id_archiwum;
     }
 
-    public void setAkcja(Akcje akcja) {
-        this.akcja = akcja;
+    public void setId_archiwum(int id_archiwum) {
+        this.id_archiwum = id_archiwum;
     }
 
-    public Grupa getGrupy() {
-        return grupy;
+    public int getId_grupy() {
+        return id_grupy;
     }
 
-    public void setGrupy(Grupa grupy) {
-        this.grupy = grupy;
+    public void setId_grupy(int id_grupy) {
+        this.id_grupy = id_grupy;
     }
 
-    public int getIdArchiwum() {
-        return idArchiwum;
+    public boolean isCzy_znaleziono() {
+        return czy_znaleziono;
     }
 
-    public void setIdArchiwum(int idArchiwum) {
-        this.idArchiwum = idArchiwum;
+    public void setCzy_znaleziono(boolean czy_znaleziono) {
+        this.czy_znaleziono = czy_znaleziono;
     }
 
-    public int getIdGrupy()
-    {
-        return idGrupy;
-    }
-
-    public void setIdGrupy(int idGrupy)
-    {
-        this.idGrupy = idGrupy;
-    }
-
-    public boolean isCzyZnaleziono()
-    {
-        return czyZnaleziono;
-    }
-
-    public void setCzyZnaleziono(boolean czyZnaleziono)
-    {
-        this.czyZnaleziono = czyZnaleziono;
-    }
-
-    public String getWspolrzedne()
-    {
+    public String getWspolrzedne() {
         return wspolrzedne;
     }
 
-    public void setWspolrzedne(String wspolrzedne)
-    {
+    public void setWspolrzedne(String wspolrzedne) {
         this.wspolrzedne = wspolrzedne;
     }
 
-    public byte[] getTrasa()
-    {
+    public byte[] getTrasa() {
         return trasa;
     }
 
-    public void setTrasa(byte[] trasa)
-    {
+    public void setTrasa(byte[] trasa) {
         this.trasa = trasa;
+    }
+
+    public Grupa getGrupa() {
+        return grupa;
+    }
+
+    public void setGrupa(Grupa grupa) {
+        this.grupa = grupa;
     }
 }

@@ -1,32 +1,29 @@
 package com.grspck.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-@Entity(name = "Ratownicy")
+@Entity(name = "ratownicy")
 public class Ratownicy
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idRatownika;
+    private int id_ratownika;
     private String nazwisko;
     private String imie;
     private boolean dowodca;
-    private String nrTel;
+    private String nr_tel;
 
     public Ratownicy()
     {
 
     }
 
-    public int getIdRatownika() {
-        return idRatownika;
+    public int getId_ratownika() {
+        return id_ratownika;
     }
 
-    public void setIdRatownika(int idRatownika) {
-        this.idRatownika = idRatownika;
+    public void setId_ratownika(int id_ratownika) {
+        this.id_ratownika = id_ratownika;
     }
 
     public String getNazwisko() {
@@ -53,11 +50,12 @@ public class Ratownicy
         this.dowodca = dowodca;
     }
 
-    public String getNrTel() {
-        return nrTel;
+    public String getNr_tel() {
+        return nr_tel;
     }
 
-    public void setNrTel(String nrTel) {
-        this.nrTel = nrTel;
+    public void setNr_tel(String nr_tel) {
+        this.nr_tel = nr_tel;
     }
+
 }

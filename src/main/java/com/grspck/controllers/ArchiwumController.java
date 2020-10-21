@@ -1,8 +1,6 @@
 package com.grspck.controllers;
 
-import com.grspck.models.Akcje;
 import com.grspck.models.Archiwum;
-import com.grspck.repositories.AkcjaRepository;
 import com.grspck.repositories.ArchiwumRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,7 +46,7 @@ public class ArchiwumController
     public Archiwum update(@PathVariable Integer id, @RequestBody Archiwum archiwum)
     {
         Archiwum existingArchwium = archiwumRepository.getOne(id);
-        BeanUtils.copyProperties(archiwum, existingArchwium, "idArchiwum");
+        BeanUtils.copyProperties(archiwum, existingArchwium, "id_archiwum");
         return archiwumRepository.saveAndFlush(existingArchwium);
     }
 }

@@ -3,65 +3,41 @@ package com.grspck.models;
 import javax.persistence.*;
 import java.util.List;
 
-@Entity(name = "PrzydzialSprzetu")
+@Entity(name = "przydzial_sprzetu")
 public class PrzydzialSprzetu
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idPrzydzialuSprzetu;
-    private int idGrupy;
-    private int idSprzetu;
-
-    @OneToOne
-    @JoinColumn(name = "idGrupy", referencedColumnName = "idGrupy")
-    private Grupa grupy;
-
-    @OneToMany
-    @JoinColumn(name = "idSprzetu", referencedColumnName = "idSprzetu")
-    private List<Sprzet> sprzet;
+    private int id_przydzialu_Sprzetu;
+    private int id_grupy;
+    private int id_sprzetu;
 
     public PrzydzialSprzetu()
     {
 
     }
 
-    public Grupa getGrupy() {
-        return grupy;
+    public int getId_przydzialu_Sprzetu() {
+        return id_przydzialu_Sprzetu;
     }
 
-    public void setGrupy(Grupa grupy) {
-        this.grupy = grupy;
+    public void setId_przydzialu_Sprzetu(int id_przydzialu_Sprzetu) {
+        this.id_przydzialu_Sprzetu = id_przydzialu_Sprzetu;
     }
 
-    public List<Sprzet> getSprzet() {
-        return sprzet;
+    public int getId_grupy() {
+        return id_grupy;
     }
 
-    public void setSprzet(List<Sprzet> sprzet) {
-        this.sprzet = sprzet;
+    public void setId_grupy(int id_grupy) {
+        this.id_grupy = id_grupy;
     }
 
-    public int getIdPrzydzialuSprzetu() {
-        return idPrzydzialuSprzetu;
+    public int getId_sprzetu() {
+        return id_sprzetu;
     }
 
-    public void setIdPrzydzialuSprzetu(int idPrzydzialuSprzetu) {
-        this.idPrzydzialuSprzetu = idPrzydzialuSprzetu;
-    }
-
-    public int getIdGrupy() {
-        return idGrupy;
-    }
-
-    public void setIdGrupy(int idGrupy) {
-        this.idGrupy = idGrupy;
-    }
-
-    public int getIdSprzetu() {
-        return idSprzetu;
-    }
-
-    public void setIdSprzetu(int idSprzetu) {
-        this.idSprzetu = idSprzetu;
+    public void setId_sprzetu(int id_sprzetu) {
+        this.id_sprzetu = id_sprzetu;
     }
 }

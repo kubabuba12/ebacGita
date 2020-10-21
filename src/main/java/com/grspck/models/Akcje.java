@@ -7,106 +7,72 @@ import org.hibernate.annotations.Type;
 import javax.persistence.*;
 import java.util.List;
 
-@Entity(name = "Akcja")
+@Entity(name = "akcja")
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Akcje
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idAkcji;
-    private int idGrupy;
+    private int id_akcji;
+    private int id_grupy;
     private boolean status;
-    private int idSektora;
-    private String czasTrwania;
+    private int id_sektora;
+    private String czas_trwania;
 
     @Lob
     @Type(type = "org.hibernate.type.BinaryType")
-    private byte[] oziExplorer;
-
-    @OneToMany
-    @JoinColumn(name = "idGrupy", referencedColumnName = "idGrupy")
-    private List<Grupa> grupy;
-
-    @OneToMany
-    @JoinColumn(name = "idSektora", referencedColumnName = "idSektora")
-    private List<Sektory> sektory;
+    private byte[] ozi_explorer;
 
     public Akcje()
     {
 
     }
 
-    public List<Grupa> getGrupy() {
-        return grupy;
+    public int getId_akcji() {
+        return id_akcji;
     }
 
-    public void setGrupy(List<Grupa> grupy) {
-        this.grupy = grupy;
+    public void setId_akcji(int id_akcji) {
+        this.id_akcji = id_akcji;
     }
 
-    public List<Sektory> getSektory() {
-        return sektory;
+    public int getId_grupy() {
+        return id_grupy;
     }
 
-    public void setSektory(List<Sektory> sektory) {
-        this.sektory = sektory;
+    public void setId_grupy(int id_grupy) {
+        this.id_grupy = id_grupy;
     }
 
-    public int getIdAkcji() {
-        return idAkcji;
-    }
-
-    public void setIdAkcji(int idAkcji) {
-        this.idAkcji = idAkcji;
-    }
-
-    public int getIdGrupy()
-    {
-        return idGrupy;
-    }
-
-    public void setIdGrupy(int idGrupy)
-    {
-        this.idGrupy = idGrupy;
-    }
-
-    public boolean getStatus()
-    {
+    public boolean isStatus() {
         return status;
     }
 
-    public void setStatus(boolean status)
-    {
+    public void setStatus(boolean status) {
         this.status = status;
     }
 
-    public int getIdSektora()
-    {
-        return idSektora;
+    public int getId_sektora() {
+        return id_sektora;
     }
 
-    public void setIdSektora(int idSektora)
-    {
-        this.idSektora = idSektora;
+    public void setId_sektora(int id_sektora) {
+        this.id_sektora = id_sektora;
     }
 
-    public String getCzasTrwania()
-    {
-        return czasTrwania;
+    public String getCzas_trwania() {
+        return czas_trwania;
     }
 
-    public void setCzasTrwania(String czasTrwania)
-    {
-        this.czasTrwania = czasTrwania;
+    public void setCzas_trwania(String czas_trwania) {
+        this.czas_trwania = czas_trwania;
     }
 
-    public byte[] getOziExplorer()
-    {
-        return oziExplorer;
+    public byte[] getOzi_explorer() {
+        return ozi_explorer;
     }
 
-    public void setOziExplorer(byte[] oziExplorer)
-    {
-        this.oziExplorer = oziExplorer;
+    public void setOzi_explorer(byte[] ozi_explorer) {
+        this.ozi_explorer = ozi_explorer;
     }
 }

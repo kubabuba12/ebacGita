@@ -1,16 +1,14 @@
 package com.grspck.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
-@Entity(name = "Sprzet")
+@Entity(name = "sprzet")
 public class Sprzet
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idSprzetu;
+    private int id_sprzetu;
     private String nazwa;
 
     public Sprzet()
@@ -18,12 +16,12 @@ public class Sprzet
 
     }
 
-    public int getIdSprzetu() {
-        return idSprzetu;
+    public int getId_sprzetu() {
+        return id_sprzetu;
     }
 
-    public void setIdSprzetu(int idSprzetu) {
-        this.idSprzetu = idSprzetu;
+    public void setId_sprzetu(int id_sprzetu) {
+        this.id_sprzetu = id_sprzetu;
     }
 
     public String getNazwa() {

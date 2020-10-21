@@ -4,12 +4,12 @@ import javax.persistence.*;
 import java.util.Collection;
 import java.util.List;
 
-@Entity(name = "Sektory")
+@Entity(name = "sektory")
 public class Sektory
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idSektora;
+    private int id_sektora;
     private String nazwa;
 
     public Sektory()
@@ -17,12 +17,12 @@ public class Sektory
 
     }
 
-    public int getIdSektora() {
-        return idSektora;
+    public int getId_sektora() {
+        return id_sektora;
     }
 
-    public void setIdSektora(int idSektora) {
-        this.idSektora = idSektora;
+    public void setId_sektora(int id_sektora) {
+        this.id_sektora = id_sektora;
     }
 
     public String getNazwa() {
@@ -31,16 +31,5 @@ public class Sektory
 
     public void setNazwa(String nazwa) {
         this.nazwa = nazwa;
-    }
-
-    @ManyToMany
-    private Collection<Grupa> Grupy;
-
-    public Collection<Grupa> getGrupy() {
-        return Grupy;
-    }
-
-    public void setGrupy(Collection<Grupa> grupy) {
-        Grupy = grupy;
     }
 }

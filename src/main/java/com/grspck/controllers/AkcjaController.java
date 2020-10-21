@@ -46,7 +46,7 @@ public class AkcjaController
     public Akcje update(@PathVariable Integer id, @RequestBody Akcje akcje)
     {
         Akcje existingAkcja = akcjaRepository.getOne(id);
-        BeanUtils.copyProperties(akcje, existingAkcja, "idAkcji");
+        BeanUtils.copyProperties(akcje, existingAkcja, "id_akcji");
         return akcjaRepository.saveAndFlush(existingAkcja);
     }
 }

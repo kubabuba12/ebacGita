@@ -1,8 +1,6 @@
 package com.grspck.controllers;
 
-import com.grspck.models.Akcje;
 import com.grspck.models.Sprzet;
-import com.grspck.repositories.AkcjaRepository;
 import com.grspck.repositories.SprzetRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,7 +46,7 @@ public class SprzetController
     public Sprzet update(@PathVariable Integer id, @RequestBody Sprzet sprzet)
     {
         Sprzet existingSprzet = sprzetRepository.getOne(id);
-        BeanUtils.copyProperties(sprzet, existingSprzet, "idSprzetu");
+        BeanUtils.copyProperties(sprzet, existingSprzet, "id_sprzetu");
         return sprzetRepository.saveAndFlush(existingSprzet);
     }
 }
