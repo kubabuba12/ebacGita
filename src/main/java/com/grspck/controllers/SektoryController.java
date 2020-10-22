@@ -29,7 +29,7 @@ public class SektoryController
     }
 
     @PostMapping
-    public Sektory create(@RequestBody final Sektory sektory)
+    public Sektory create(@RequestBody Sektory sektory)
     {
         return sektoryRepository.saveAndFlush(sektory);
     }

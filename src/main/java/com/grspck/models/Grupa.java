@@ -32,7 +32,7 @@ public class Grupa
     )
     private Sektory sektory;
 
-    @OneToMany
+    @ManyToMany
     @JoinTable(
             name = "przydzial_ratownikow",
             joinColumns = @JoinColumn(name = "id_grupy"),

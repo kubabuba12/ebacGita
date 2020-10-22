@@ -1,15 +1,13 @@
 package com.grspck.models;
 
 import javax.persistence.*;
-import java.util.Collection;
-import java.util.List;
 
 @Entity(name = "sektory")
 public class Sektory
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_sektora;
+    private Long id_sektora;
     private String nazwa;
 
     public Sektory()
@@ -17,11 +15,11 @@ public class Sektory
 
     }
 
-    public int getId_sektora() {
+    public Long getId_sektora() {
         return id_sektora;
     }
 
-    public void setId_sektora(int id_sektora) {
+    public void setId_sektora(Long id_sektora) {
         this.id_sektora = id_sektora;
     }
 

@@ -1,13 +1,14 @@
 package com.grspck.models;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity(name = "ratownicy")
 public class Ratownicy
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_ratownika;
+    private Integer id_ratownika;
     private String nazwisko;
     private String imie;
     private boolean dowodca;
@@ -17,6 +18,9 @@ public class Ratownicy
     {
 
     }
+
+    @ManyToMany(mappedBy = "ratownicy")
+    private List<Grupa> grupy;
 
     public int getId_ratownika() {
         return id_ratownika;

@@ -31,7 +31,7 @@ public class RatownicyController
     }
 
     @PostMapping
-    public Ratownicy create(@RequestBody final Ratownicy ratownicy)
+    public Ratownicy create(@RequestBody Ratownicy ratownicy)
     {
         return ratownicyRepository.saveAndFlush(ratownicy);
     }

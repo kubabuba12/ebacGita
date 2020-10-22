@@ -1,5 +1,7 @@
 package com.grspck.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity(name = "przydzial_ratownikow")
