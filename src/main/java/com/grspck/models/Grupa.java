@@ -26,9 +26,9 @@ public class Grupa
 
     @OneToOne
     @JoinTable(
-            name = "akcja",
+            name = "przydzial_grupy_do_akcji",
             joinColumns = @JoinColumn(name = "id_grupy"),
-            inverseJoinColumns = @JoinColumn(name = "id_sektora")
+            inverseJoinColumns = @JoinColumn(name = "id_akcji")
     )
     private Sektory sektory;
 
