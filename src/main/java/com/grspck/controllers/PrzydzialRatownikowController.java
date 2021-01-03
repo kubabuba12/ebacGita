@@ -28,6 +28,21 @@ public class PrzydzialRatownikowController
         return przydzialRatownikowRepository.getOne(id);
     }
 
+    @GetMapping
+    @RequestMapping("ratownik/{id}")
+    public boolean checkIfRatownikExists(@PathVariable Integer id)
+    {
+        List<PrzydzialRatownikow> przydzialy = przydzialRatownikowRepository.findAll();
+        for(PrzydzialRatownikow przydzial : przydzialy)
+        {
+            if(przydzial.getId_ratownika() == id)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
     @PostMapping
     public PrzydzialRatownikow create(@RequestBody final PrzydzialRatownikow przydzialRatownikow)
     {

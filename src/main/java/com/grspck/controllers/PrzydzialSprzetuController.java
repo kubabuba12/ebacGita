@@ -27,6 +27,20 @@ public class PrzydzialSprzetuController
     {
         return przydzialSprzetuRepository.getOne(id);
     }
+    @GetMapping
+    @RequestMapping("sprzet/{id}")
+    public boolean checkIfSprzetExists(@PathVariable Integer id)
+    {
+        List<PrzydzialSprzetu> przydzialy = przydzialSprzetuRepository.findAll();
+        for(PrzydzialSprzetu przydzial : przydzialy)
+        {
+            if(przydzial.getId_sprzetu() == id)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 
     @PostMapping
     public PrzydzialSprzetu create(@RequestBody final PrzydzialSprzetu przydzialSprzetu)

@@ -28,6 +28,21 @@ public class PrzydzialZwierzeciaController
         return przydzialZwierzeciaRepository.getOne(id);
     }
 
+    @GetMapping
+    @RequestMapping("zwierze/{id}")
+    public boolean checkIfZwierzeExists(@PathVariable Integer id)
+    {
+        List<PrzydzialZwierzecia> przydzialy = przydzialZwierzeciaRepository.findAll();
+        for(PrzydzialZwierzecia przydzial : przydzialy)
+        {
+            if(przydzial.getId_zwierzecia() == id)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
     @PostMapping
     public PrzydzialZwierzecia create(@RequestBody final PrzydzialZwierzecia przydzialZwierzecia)
     {

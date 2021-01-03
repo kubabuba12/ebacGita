@@ -40,13 +40,13 @@ public class Grupa
     )
     private List<Ratownicy> ratownicy;
 
-    @OneToOne
+    @ManyToMany
     @JoinTable(
             name = "przydzial_sprzetu",
             joinColumns = @JoinColumn(name = "id_grupy"),
             inverseJoinColumns = @JoinColumn(name = "id_sprzetu")
     )
-    private Sprzet sprzet;
+    private List<Sprzet> sprzet;
 
     @OneToOne
     @JoinTable(
@@ -133,11 +133,11 @@ public class Grupa
         this.ratownicy = ratownicy;
     }
 
-    public Sprzet getSprzet() {
+    public List<Sprzet> getSprzet() {
         return sprzet;
     }
 
-    public void setSprzet(Sprzet sprzet) {
+    public void setSprzet(List<Sprzet> sprzet) {
         this.sprzet = sprzet;
     }
 

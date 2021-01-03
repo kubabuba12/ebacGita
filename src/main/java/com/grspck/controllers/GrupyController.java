@@ -46,7 +46,7 @@ public class GrupyController
     public Grupa update(@PathVariable Integer id, @RequestBody Grupa grupa)
     {
         Grupa existingGrupa = grupaRepository.getOne(id);
-        BeanUtils.copyProperties(grupa, existingGrupa, "id_g rupy");
+        BeanUtils.copyProperties(grupa, existingGrupa, "id_grupy");
         return grupaRepository.saveAndFlush(existingGrupa);
     }
 }

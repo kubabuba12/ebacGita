@@ -29,8 +29,9 @@ public class AkcjaController
     }
 
     @PostMapping
-    public Akcje create(@RequestBody final Akcje akcje)
+    public Akcje create(@RequestBody Akcje akcje)
     {
+        akcje.setOzi_explorer(new byte[]{ 1 });
         return akcjaRepository.saveAndFlush(akcje);
     }
 
