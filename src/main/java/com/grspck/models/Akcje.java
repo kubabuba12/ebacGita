@@ -18,6 +18,7 @@ public class Akcje
     private boolean status;
     private String nazwa;
     private String opis;
+    private String czas_rozpoczecia;
 //    private int id_sektora;
 //    private String czas_trwania;
 
@@ -85,5 +86,13 @@ public class Akcje
     public String getNazwa(){return this.nazwa;}
 
     public String getOpis(){return this.opis;}
+
+    public String getCzas_rozpoczecia() {
+        return czas_rozpoczecia;
+    }
+
+    public void setCzas_rozpoczecia(String czas_rozpoczecia) {
+        this.czas_rozpoczecia = czas_rozpoczecia;
+    }
 
 }
