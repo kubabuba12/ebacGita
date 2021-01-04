@@ -3,11 +3,13 @@ package com.grspck.models;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.Type;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Entity(name = "Grupy")
+@CrossOrigin(origins = "http://localhost:4200")
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Grupa
 {
