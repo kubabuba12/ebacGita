@@ -24,13 +24,13 @@ public class Grupa
     @Type(type = "org.hibernate.type.BinaryType")
     private byte[] ikona;
 
-    @ManyToMany
+    @OneToOne
     @JoinTable(
             name = "przydzial_grupy_do_akcji",
             joinColumns = @JoinColumn(name = "id_grupy"),
             inverseJoinColumns = @JoinColumn(name = "id_akcji")
     )
-    private List<Grupa> grupy;
+    private Akcje akcja;
 
     @ManyToMany
     @JoinTable(
@@ -141,11 +141,11 @@ public class Grupa
         this.zwierze = zwierze;
     }
 
-    public List<Grupa> getGrupy() {
-        return grupy;
+    public Akcje getAkcja() {
+        return akcja;
     }
 
-    public void setGrupy(List<Grupa> grupy) {
-        this.grupy = grupy;
+    public void setAkcja(Akcje akcja) {
+        this.akcja = akcja;
     }
 }
