@@ -26,14 +26,6 @@ public class Grupa
 
     @ManyToMany
     @JoinTable(
-            name = "przydzial_grupy_do_akcji",
-            joinColumns = @JoinColumn(name = "id_akcji"),
-            inverseJoinColumns = @JoinColumn(name = "id_grupy")
-    )
-    private List<Grupa> grupy;
-
-    @ManyToMany
-    @JoinTable(
             name = "przydzial_ratownikow",
             joinColumns = @JoinColumn(name = "id_grupy"),
             inverseJoinColumns = @JoinColumn(name = "id_ratownika")
@@ -115,14 +107,6 @@ public class Grupa
 
     public void setIkona(byte[] ikona) {
         this.ikona = ikona;
-    }
-
-    public List<Grupa> getGrupy() {
-        return grupy;
-    }
-
-    public void setGrupy(List<Grupa> grupy) {
-        this.grupy = grupy;
     }
 
     public List<Ratownicy> getRatownicy() {
