@@ -22,6 +22,7 @@ public class Grupa
     private String godz_powr;
     private String dowodca;
 
+
     @Lob
     @Type(type = "org.hibernate.type.BinaryType")
     private byte[] ikona;
@@ -150,4 +151,5 @@ public class Grupa
     public void setZwierze(Zwierzeta zwierze) {
         this.zwierze = zwierze;
     }
+
 }
