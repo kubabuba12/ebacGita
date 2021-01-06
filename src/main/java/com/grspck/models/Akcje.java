@@ -23,15 +23,6 @@ public class Akcje
     @Type(type = "org.hibernate.type.BinaryType")
     private byte[] ozi_explorer;
 
-
-    @ManyToMany
-    @JoinTable(
-            name = "przydzial_grupy_do_akcji",
-            joinColumns = @JoinColumn(name = "id_akcji"),
-            inverseJoinColumns = @JoinColumn(name = "id_grupy")
-    )
-    private List<Grupa> grupy;
-
     public Akcje()
     {
 
@@ -83,12 +74,5 @@ public class Akcje
 
     public void setOzi_explorer(byte[] ozi_explorer) {
         this.ozi_explorer = ozi_explorer;
-    }
-    public List<Grupa> getGrupy() {
-        return grupy;
-    }
-
-    public void setGrupy(List<Grupa> grupy) {
-        this.grupy = grupy;
     }
 }
