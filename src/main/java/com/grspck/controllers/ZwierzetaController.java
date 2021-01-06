@@ -31,9 +31,7 @@ public class ZwierzetaController
 
     @PostMapping
     public Zwierzeta create(@RequestBody final Zwierzeta zwierzeta)
-    {
-        return zwierzetaRepository.saveAndFlush(zwierzeta);
-    }
+    { return zwierzetaRepository.saveAndFlush(zwierzeta); }
 
     @DeleteMapping
     @RequestMapping(value = "{id}", method = RequestMethod.DELETE)
