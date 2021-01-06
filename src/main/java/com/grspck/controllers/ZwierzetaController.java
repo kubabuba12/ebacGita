@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/Zwierzeta")
+@CrossOrigin(origins = "http://localhost:4200")
+@RequestMapping("Zwierzeta")
 public class ZwierzetaController
 {
     @Autowired
@@ -30,9 +31,7 @@ public class ZwierzetaController
 
     @PostMapping
     public Zwierzeta create(@RequestBody final Zwierzeta zwierzeta)
-    {
-        return zwierzetaRepository.saveAndFlush(zwierzeta);
-    }
+    { return zwierzetaRepository.saveAndFlush(zwierzeta); }
 
     @DeleteMapping
     @RequestMapping(value = "{id}", method = RequestMethod.DELETE)

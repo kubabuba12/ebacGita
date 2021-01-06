@@ -7,17 +7,17 @@ import org.hibernate.annotations.Type;
 import javax.persistence.*;
 import java.util.List;
 
-@Entity(name = "akcja")
+@Entity(name = "Akcja")
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Akcje
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_akcji;
-    private int id_grupy;
     private boolean status;
-    private int id_sektora;
-    private String czas_trwania;
+    private String nazwa;
+    private String opis;
+    private String czas_rozpoczecia;
 
     @Lob
     @Type(type = "org.hibernate.type.BinaryType")
@@ -45,13 +45,6 @@ public class Akcje
         this.id_akcji = id_akcji;
     }
 
-    public int getId_grupy() {
-        return id_grupy;
-    }
-
-    public void setId_grupy(int id_grupy) {
-        this.id_grupy = id_grupy;
-    }
 
     public boolean isStatus() {
         return status;
@@ -61,22 +54,6 @@ public class Akcje
         this.status = status;
     }
 
-    public int getId_sektora() {
-        return id_sektora;
-    }
-
-    public void setId_sektora(int id_sektora) {
-        this.id_sektora = id_sektora;
-    }
-
-    public String getCzas_trwania() {
-        return czas_trwania;
-    }
-
-    public void setCzas_trwania(String czas_trwania) {
-        this.czas_trwania = czas_trwania;
-    }
-
     public byte[] getOzi_explorer() {
         return ozi_explorer;
     }
@@ -84,6 +61,7 @@ public class Akcje
     public void setOzi_explorer(byte[] ozi_explorer) {
         this.ozi_explorer = ozi_explorer;
     }
+
     public List<Grupa> getGrupy() {
         return grupy;
     }
@@ -91,4 +69,21 @@ public class Akcje
     public void setGrupy(List<Grupa> grupy) {
         this.grupy = grupy;
     }
+
+    public void setNazwa(String nazwa){this.nazwa = nazwa;}
+
+    public void setOpis(String opis){this.opis = opis;}
+
+    public String getNazwa(){return this.nazwa;}
+
+    public String getOpis(){return this.opis;}
+
+    public String getCzas_rozpoczecia() {
+        return czas_rozpoczecia;
+    }
+
+    public void setCzas_rozpoczecia(String czas_rozpoczecia) {
+        this.czas_rozpoczecia = czas_rozpoczecia;
+    }
+
 }

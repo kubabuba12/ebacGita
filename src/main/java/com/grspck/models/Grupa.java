@@ -3,11 +3,13 @@ package com.grspck.models;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.Type;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Entity(name = "Grupy")
+@CrossOrigin(origins = "http://localhost:4200")
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Grupa
 {
@@ -19,6 +21,7 @@ public class Grupa
     private String godz_wyj;
     private String godz_powr;
     private String dowodca;
+
 
     @Lob
     @Type(type = "org.hibernate.type.BinaryType")
@@ -132,4 +135,5 @@ public class Grupa
     public void setZwierze(Zwierzeta zwierze) {
         this.zwierze = zwierze;
     }
+
 }
