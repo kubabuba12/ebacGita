@@ -26,7 +26,7 @@ public class Grupa
     @Lob
     @Type(type = "org.hibernate.type.BinaryType")
     private byte[] ikona;
-
+    //tu se dodam grupe do akcji
     @OneToOne
     @JoinTable(
             name = "przydzial_grupy_do_akcji",
