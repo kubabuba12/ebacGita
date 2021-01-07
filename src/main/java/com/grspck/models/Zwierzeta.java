@@ -23,11 +23,11 @@ public class Zwierzeta
         this.id_zwierzecia = id_zwierzecia;
     }
 
-    public String getNazwa() {
+    public String getImie() {
         return imie;
     }
 
-    public void setNazwa(String imie) {
+    public void setImie(String imie) {
         this.imie = imie;
     }
 }
