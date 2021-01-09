@@ -67,7 +67,6 @@ public class Archiwum
         this.opis = opis;
     }
 
-<<<<<<< .merge_file_a10032
     public int getId_akcji() {
         return id_akcji;
     }
@@ -75,6 +74,4 @@ public class Archiwum
     public void setId_akcji(int id_akcji) {
         this.id_akcji = id_akcji;
     }
-=======
->>>>>>> .merge_file_a18804
 }
