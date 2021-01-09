@@ -14,6 +14,7 @@ public class Archiwum
     private int id_grupy;
     private boolean czy_znaleziono;
     private String wspolrzedne;
+    private int id_akcji;
 
     @Lob
     @Type(type = "org.hibernate.type.BinaryType")
@@ -73,5 +74,13 @@ public class Archiwum
 
     public void setGrupa(Grupa grupa) {
         this.grupa = grupa;
+    }
+
+    public int getId_akcji() {
+        return id_akcji;
+    }
+
+    public void setId_akcji(int id_akcji) {
+        this.id_akcji = id_akcji;
     }
 }
