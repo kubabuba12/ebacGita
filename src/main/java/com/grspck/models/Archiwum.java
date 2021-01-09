@@ -57,5 +57,4 @@ public class Archiwum
     public void setOpis(String opis) {
         this.opis = opis;
     }
-
 }
