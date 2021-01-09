@@ -12,16 +12,9 @@ public class Archiwum
     private int id_archiwum;
     private boolean czy_znaleziono;
     private String wspolrzedne;
-    private int id_akcji;
-
-    @Lob
-    @Type(type = "org.hibernate.type.BinaryType")
-    private byte[] trasa;
-
     private String tytul;
     private String opis;
-
-
+    
     public Archiwum()
     {
 
@@ -65,13 +58,5 @@ public class Archiwum
 
     public void setOpis(String opis) {
         this.opis = opis;
-    }
-
-    public int getId_akcji() {
-        return id_akcji;
-    }
-
-    public void setId_akcji(int id_akcji) {
-        this.id_akcji = id_akcji;
     }
 }
