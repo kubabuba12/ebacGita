@@ -3,7 +3,6 @@ package com.grspck.models;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity(name = "archiwum")
 public class Archiwum
@@ -11,7 +10,6 @@ public class Archiwum
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_archiwum;
-    private int id_grupy;
     private boolean czy_znaleziono;
     private String wspolrzedne;
     private int id_akcji;
@@ -20,13 +18,14 @@ public class Archiwum
     @Type(type = "org.hibernate.type.BinaryType")
     private byte[] trasa;
 
+    private String tytul;
+    private String opis;
+
+
     public Archiwum()
     {
 
     }
-
-    @OneToOne
-    private Grupa grupa;
 
     public int getId_archiwum() {
         return id_archiwum;
@@ -34,14 +33,6 @@ public class Archiwum
 
     public void setId_archiwum(int id_archiwum) {
         this.id_archiwum = id_archiwum;
-    }
-
-    public int getId_grupy() {
-        return id_grupy;
-    }
-
-    public void setId_grupy(int id_grupy) {
-        this.id_grupy = id_grupy;
     }
 
     public boolean isCzy_znaleziono() {
@@ -60,22 +51,23 @@ public class Archiwum
         this.wspolrzedne = wspolrzedne;
     }
 
-    public byte[] getTrasa() {
-        return trasa;
+    public String getTytul() {
+        return tytul;
     }
 
-    public void setTrasa(byte[] trasa) {
-        this.trasa = trasa;
+    public void setTytul(String tytul) {
+        this.tytul = tytul;
     }
 
-    public Grupa getGrupa() {
-        return grupa;
+    public String getOpis() {
+        return opis;
     }
 
-    public void setGrupa(Grupa grupa) {
-        this.grupa = grupa;
+    public void setOpis(String opis) {
+        this.opis = opis;
     }
 
+<<<<<<< .merge_file_a10032
     public int getId_akcji() {
         return id_akcji;
     }
@@ -83,4 +75,6 @@ public class Archiwum
     public void setId_akcji(int id_akcji) {
         this.id_akcji = id_akcji;
     }
+=======
+>>>>>>> .merge_file_a18804
 }
