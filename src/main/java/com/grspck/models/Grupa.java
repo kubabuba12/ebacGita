@@ -26,11 +26,11 @@ public class Grupa
 
     @OneToOne
     @JoinTable(
-            name = "akcja",
+            name = "przydzial_grupy_do_akcji",
             joinColumns = @JoinColumn(name = "id_grupy"),
-            inverseJoinColumns = @JoinColumn(name = "id_sektora")
+            inverseJoinColumns = @JoinColumn(name = "id_akcji")
     )
-    private Sektory sektory;
+    private Akcje akcja;
 
     @ManyToMany
     @JoinTable(
@@ -40,13 +40,13 @@ public class Grupa
     )
     private List<Ratownicy> ratownicy;
 
-    @OneToOne
+    @ManyToMany
     @JoinTable(
             name = "przydzial_sprzetu",
             joinColumns = @JoinColumn(name = "id_grupy"),
             inverseJoinColumns = @JoinColumn(name = "id_sprzetu")
     )
-    private Sprzet sprzet;
+    private List<Sprzet> sprzet;
 
     @OneToOne
     @JoinTable(
@@ -117,14 +117,6 @@ public class Grupa
         this.ikona = ikona;
     }
 
-    public Sektory getSektory() {
-        return sektory;
-    }
-
-    public void setSektory(Sektory sektory) {
-        this.sektory = sektory;
-    }
-
     public List<Ratownicy> getRatownicy() {
         return ratownicy;
     }
@@ -133,11 +125,11 @@ public class Grupa
         this.ratownicy = ratownicy;
     }
 
-    public Sprzet getSprzet() {
+    public List<Sprzet> getSprzet() {
         return sprzet;
     }
 
-    public void setSprzet(Sprzet sprzet) {
+    public void setSprzet(List<Sprzet> sprzet) {
         this.sprzet = sprzet;
     }
 
@@ -147,5 +139,13 @@ public class Grupa
 
     public void setZwierze(Zwierzeta zwierze) {
         this.zwierze = zwierze;
+    }
+
+    public Akcje getAkcja() {
+        return akcja;
+    }
+
+    public void setAkcja(Akcje akcja) {
+        this.akcja = akcja;
     }
 }

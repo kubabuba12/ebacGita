@@ -8,7 +8,7 @@ public class Ratownicy
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id_ratownika;
+    private int id_ratownika;
     private String nazwisko;
     private String imie;
     private boolean dowodca;
