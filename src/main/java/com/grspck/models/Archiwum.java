@@ -14,7 +14,7 @@ public class Archiwum
     private String wspolrzedne;
     private String tytul;
     private String opis;
-    
+
     public Archiwum()
     {
 
