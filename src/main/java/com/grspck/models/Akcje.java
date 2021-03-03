@@ -18,6 +18,7 @@ public class Akcje
     private String opis;
     private boolean status;
     private String czas_rozpoczecia;
+    private boolean czy_cwiczenia;
 
     @Lob
     @Type(type = "org.hibernate.type.BinaryType")
@@ -74,5 +75,15 @@ public class Akcje
 
     public void setOzi_explorer(byte[] ozi_explorer) {
         this.ozi_explorer = ozi_explorer;
+    }
+
+    public boolean getCzy_cwiczenia()
+    {
+        return czy_cwiczenia;
+    }
+
+    public void setCzy_cwiczenia(boolean czy_cwiczenia)
+    {
+        this.czy_cwiczenia = czy_cwiczenia;
     }
 }

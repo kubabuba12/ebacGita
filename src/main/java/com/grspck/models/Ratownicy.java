@@ -13,6 +13,7 @@ public class Ratownicy
     private String imie;
     private boolean dowodca;
     private String nr_tel;
+    private String prefix;
 
     public Ratownicy()
     {
@@ -60,6 +61,16 @@ public class Ratownicy
 
     public void setNr_tel(String nr_tel) {
         this.nr_tel = nr_tel;
+    }
+
+    public String getPrefix()
+    {
+        return prefix;
+    }
+
+    public void setPrefix(String prefix)
+    {
+        this.prefix = prefix;
     }
 
 }

@@ -12,6 +12,7 @@ public class Archiwum
     private String wspolrzedne;
     private String tytul;
     private String opis;
+    private String uwagi;
 
     public Archiwum()
     {
@@ -26,7 +27,7 @@ public class Archiwum
         this.id_archiwum = id_archiwum;
     }
 
-    public boolean isCzy_znaleziono() {
+    public boolean getCzy_znaleziono() {
         return czy_znaleziono;
     }
 
@@ -56,6 +57,16 @@ public class Archiwum
 
     public void setOpis(String opis) {
         this.opis = opis;
+    }
+
+    public String getUwagi()
+    {
+        return uwagi;
+    }
+
+    public void setUwagi(String uwagi)
+    {
+        this.uwagi = uwagi;
     }
 
 }
