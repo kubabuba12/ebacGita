@@ -14,10 +14,11 @@ public class Akcje
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_akcji;
-    private boolean status;
     private String nazwa;
     private String opis;
+    private boolean status;
     private String czas_rozpoczecia;
+    private boolean czy_cwiczenia;
 
     @Lob
     @Type(type = "org.hibernate.type.BinaryType")
@@ -36,15 +37,6 @@ public class Akcje
         this.id_akcji = id_akcji;
     }
 
-
-    public boolean isStatus() {
-        return status;
-    }
-
-    public void setStatus(boolean status) {
-        this.status = status;
-    }
-
     public byte[] getOzi_explorer() {
         return ozi_explorer;
     }
@@ -57,9 +49,13 @@ public class Akcje
 
     public void setOpis(String opis){this.opis = opis;}
 
-    public String getNazwa(){return this.nazwa;}
+    public boolean getStatus() {
+        return status;
+    }
 
-    public String getOpis(){return this.opis;}
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
 
     public String getCzas_rozpoczecia() {
         return czas_rozpoczecia;
@@ -69,4 +65,18 @@ public class Akcje
         this.czas_rozpoczecia = czas_rozpoczecia;
     }
 
+    public String getNazwa(){return this.nazwa;}
+
+    public String getOpis(){return this.opis;}
+
+
+    public boolean getCzy_cwiczenia()
+    {
+        return czy_cwiczenia;
+    }
+
+    public void setCzy_cwiczenia(boolean czy_cwiczenia)
+    {
+        this.czy_cwiczenia = czy_cwiczenia;
+    }
 }

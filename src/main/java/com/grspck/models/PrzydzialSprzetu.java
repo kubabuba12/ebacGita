@@ -8,7 +8,7 @@ public class PrzydzialSprzetu
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_przydzialu_Sprzetu;
+    private int id_przydzialu_sprzetu;
     private int id_grupy;
     private int id_sprzetu;
 
@@ -18,11 +18,11 @@ public class PrzydzialSprzetu
     }
 
     public int getId_przydzialu_Sprzetu() {
-        return id_przydzialu_Sprzetu;
+        return id_przydzialu_sprzetu;
     }
 
     public void setId_przydzialu_Sprzetu(int id_przydzialu_Sprzetu) {
-        this.id_przydzialu_Sprzetu = id_przydzialu_Sprzetu;
+        this.id_przydzialu_sprzetu = id_przydzialu_Sprzetu;
     }
 
     public int getId_grupy() {

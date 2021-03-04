@@ -1,6 +1,7 @@
 package com.grspck.controllers;
 
 import com.grspck.models.Akcje;
+import com.grspck.models.Archiwum;
 import com.grspck.repositories.AkcjaRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,7 +33,6 @@ public class AkcjaController
     @PostMapping
     public Akcje create(@RequestBody Akcje akcje)
     {
-        akcje.setOzi_explorer(new byte[]{ 1 });
         return akcjaRepository.saveAndFlush(akcje);
     }
 
@@ -40,6 +40,14 @@ public class AkcjaController
     @RequestMapping(value = "{id}", method = RequestMethod.DELETE)
     public void delete(@PathVariable Integer id)
     {
+
+        List<Akcje> akcje = akcjaRepository.findAll();
+        Akcje akcja = akcje.get(id);
+        Archiwum archiwum = new Archiwum();
+        archiwum.setOpis(akcja.getOpis());
+        archiwum.setCzy_znaleziono(akcja.getStatus());
+        archiwum.setTytul(akcja.getNazwa());
+
         akcjaRepository.deleteById(id);
     }
 

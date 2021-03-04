@@ -8,7 +8,7 @@ public class PrzydzialZwierzecia
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_Przydzialu_zwierzecia;
+    private int id_przydzialu_zwierzecia;
     private int id_grupy;
     private int id_zwierzecia;
 
@@ -18,11 +18,11 @@ public class PrzydzialZwierzecia
     }
 
     public int getId_Przydzialu_zwierzecia() {
-        return id_Przydzialu_zwierzecia;
+        return id_przydzialu_zwierzecia;
     }
 
-    public void setId_Przydzialu_zwierzecia(int id_Przydzialu_zwierzecia) {
-        this.id_Przydzialu_zwierzecia = id_Przydzialu_zwierzecia;
+    public void setId_Przydzialu_zwierzecia(int id_przydzialu_zwierzecia) {
+        this.id_przydzialu_zwierzecia = id_przydzialu_zwierzecia;
     }
 
     public int getId_grupy() {
