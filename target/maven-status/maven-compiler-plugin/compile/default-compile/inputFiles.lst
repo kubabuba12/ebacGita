@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 H:\KSSR31\src\main\java\com\grspck\controllers\SektoryController.java
 H:\KSSR31\src\main\java\com\grspck\models\Ratownicy.java
 H:\KSSR31\src\main\java\com\grspck\models\Grupa.java
@@ -33,3 +34,40 @@ H:\KSSR31\src\main\java\com\grspck\models\Sektory.java
 H:\KSSR31\src\main\java\com\grspck\configuration\RepositoryConfig.java
 H:\KSSR31\src\main\java\com\grspck\repositories\AkcjaRepository.java
 H:\KSSR31\src\main\java\com\grspck\controllers\PrzydzialZwierzeciaController.java
+=======
+C:\Users\Maciek\ebacGita\src\main\java\com\grspck\models\Ratownicy.java
+C:\Users\Maciek\ebacGita\src\main\java\com\grspck\controllers\PrzydzialRatownikowController.java
+C:\Users\Maciek\ebacGita\src\main\java\com\grspck\repositories\ZwierzetaRepository.java
+C:\Users\Maciek\ebacGita\src\main\java\com\grspck\models\PrzydzialZwierzecia.java
+C:\Users\Maciek\ebacGita\src\main\java\com\grspck\repositories\PrzydzialRatownikowRepository.java
+C:\Users\Maciek\ebacGita\src\main\java\com\grspck\repositories\PrzydzialZwierzeciaRepository.java
+C:\Users\Maciek\ebacGita\src\main\java\com\grspck\models\Grupa.java
+C:\Users\Maciek\ebacGita\src\main\java\com\grspck\models\Sprzet.java
+C:\Users\Maciek\ebacGita\src\main\java\com\grspck\controllers\AkcjaController.java
+C:\Users\Maciek\ebacGita\src\main\java\com\grspck\models\Akcje.java
+C:\Users\Maciek\ebacGita\src\main\java\com\grspck\controllers\PrzydzialZwierzeciaController.java
+C:\Users\Maciek\ebacGita\src\main\java\com\grspck\repositories\RatownicyRepository.java
+C:\Users\Maciek\ebacGita\src\main\java\com\grspck\repositories\SektoryRepository.java
+C:\Users\Maciek\ebacGita\src\main\java\com\grspck\controllers\SektoryController.java
+C:\Users\Maciek\ebacGita\src\main\java\com\grspck\GrspckApplication.java
+C:\Users\Maciek\ebacGita\src\main\java\com\grspck\controllers\ArchiwumController.java
+C:\Users\Maciek\ebacGita\src\main\java\com\grspck\repositories\ArchiwumRepository.java
+C:\Users\Maciek\ebacGita\src\main\java\com\grspck\models\Sektory.java
+C:\Users\Maciek\ebacGita\src\main\java\com\grspck\models\PrzydzialSprzetu.java
+C:\Users\Maciek\ebacGita\src\main\java\com\grspck\controllers\SprzetController.java
+C:\Users\Maciek\ebacGita\src\main\java\com\grspck\models\Zwierzeta.java
+C:\Users\Maciek\ebacGita\src\main\java\com\grspck\repositories\AkcjaRepository.java
+C:\Users\Maciek\ebacGita\src\main\java\com\grspck\repositories\SprzetRepository.java
+C:\Users\Maciek\ebacGita\src\main\java\com\grspck\models\Archiwum.java
+C:\Users\Maciek\ebacGita\src\main\java\com\grspck\repositories\PrzydzialGrupyDoAkcjiRepository.java
+C:\Users\Maciek\ebacGita\src\main\java\com\grspck\controllers\PrzydzialGrupyDoAkcjiController.java
+C:\Users\Maciek\ebacGita\src\main\java\com\grspck\repositories\GrupaRepository.java
+C:\Users\Maciek\ebacGita\src\main\java\com\grspck\models\PrzydzialRatownikow.java
+C:\Users\Maciek\ebacGita\src\main\java\com\grspck\models\PrzydzialGrupyDoAkcji.java
+C:\Users\Maciek\ebacGita\src\main\java\com\grspck\configuration\RepositoryConfig.java
+C:\Users\Maciek\ebacGita\src\main\java\com\grspck\controllers\PrzydzialSprzetuController.java
+C:\Users\Maciek\ebacGita\src\main\java\com\grspck\controllers\GrupyController.java
+C:\Users\Maciek\ebacGita\src\main\java\com\grspck\controllers\RatownicyController.java
+C:\Users\Maciek\ebacGita\src\main\java\com\grspck\repositories\PrzydzialSprzetuRepository.java
+C:\Users\Maciek\ebacGita\src\main\java\com\grspck\controllers\ZwierzetaController.java
+>>>>>>> 7429df165a9776cdb5a5a5428e5cb59fccfb4af3

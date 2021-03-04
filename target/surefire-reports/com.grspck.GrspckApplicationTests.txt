@@ -1,6 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: com.grspck.GrspckApplicationTests
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.566 s <<< FAILURE! - in com.grspck.GrspckApplicationTests
 contextLoads  Time elapsed: 0.001 s  <<< ERROR!
 java.lang.IllegalStateException: Failed to load ApplicationContext
@@ -12,3 +13,6 @@ Caused by: java.lang.IllegalStateException: Unable to set value for property dri
 Caused by: java.lang.reflect.InvocationTargetException
 Caused by: java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
 
+=======
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 28.014 s - in com.grspck.GrspckApplicationTests
+>>>>>>> 7429df165a9776cdb5a5a5428e5cb59fccfb4af3
